@@ -2,7 +2,7 @@
 import React from 'react'
 import styled from 'styled-components'
 //-------------------------dependency
-import {avatar}  from '../img/avatar.png'
+import avatar  from '../img/avatar.png'
 
 const NavStyled = styled.div`
       padding: 2rem 1.5rem;

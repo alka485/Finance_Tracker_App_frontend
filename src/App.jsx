@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import bg from './img/bg.png'
 import {MainLayout}  from './styles/Layout'
 import Orb from './components/Orb'
+import Navigation from './components/Navigation'
 
 //import './App.css'
 
@@ -21,6 +22,7 @@ function App() {
     <AppStyled className='App'>
       <Orb/>
       <MainLayout>
+        <Navigation/>
         
       </MainLayout>
       
