@@ -3,10 +3,12 @@ import React from 'react'
 import styled from 'styled-components'
 //-------------------------------------dependency
 import { InnerLayout } from '../styles/Layout'
+import { useGlobalContext } from '../context/globalContext';
 
 const IncomeStyled = styled.div ``;
 
 const Income = () => {
+  const {addIncome} = useGlobalContext()
   return (
     <IncomeStyled>
       <InnerLayout>
@@ -14,6 +16,7 @@ const Income = () => {
         <div className="income-content">
           <div className="form-container"></div>
           <div className="incomes">
+
             
           </div>
         </div>
