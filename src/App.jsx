@@ -6,6 +6,9 @@ import bg from './img/bg.png'
 import {MainLayout}  from './styles/Layout'
 //import Orb from './components/Orb'
 import Navigation from './components/Navigation'
+import Dashboard from './components/Dashboard';
+import Income from './components/Income';
+import Expenses from './components/Expenses'
 
 //import './App.css'
 
@@ -32,7 +35,18 @@ function App() {
 
   //func displayData
   const displayData = () => {
-    console.log("hello");
+    switch(active){
+      case 1: 
+          return <Dashboard/>
+      case 2:
+          return <Dashboard/>
+      case 3: 
+          return <Income/>
+      case 4:
+          return <Expenses/>
+      default:
+          return <Dashboard/>                 
+    }
   }
   
 
