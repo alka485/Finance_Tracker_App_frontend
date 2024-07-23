@@ -9,6 +9,7 @@ import Navigation from './components/Navigation'
 import Dashboard from './components/Dashboard';
 import Income from './components/Income';
 import Expenses from './components/Expenses'
+import { useGlobalContext} from './context/globalContext'
 
 //import './App.css'
 
@@ -32,6 +33,9 @@ const AppStyled = styled.div `
 function App() {
 
   const[active, setActive] = useState(1);
+
+  const global = useGlobalContext()
+  console.log(global);
 
   //func displayData
   const displayData = () => {
