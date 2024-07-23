@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import styled from 'styled-components'
@@ -61,11 +62,27 @@ const NavStyled = styled.div`
                     transition: all .4s ease-in-out;
                 }
             }
-    }    
+    } 
+     .active{
+        color: rgba(34, 34, 96, 1) !important;
+        i{
+            color: rgba(34, 34, 96, 1) !important;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: #222260;
+            border-radius: 0 10px 10px 0;
+        }
+    }           
       
 `;
 
-const Navigation = () => {
+const Navigation = ({active, setActive}) => {
   return (
     <NavStyled>
         <div className="user-con">
@@ -78,8 +95,11 @@ const Navigation = () => {
         <ul className="menu-items">
             {menuItems.map((item) => {
                 return <li
-                       key = {item.id}               
-                >
+                       key = {item.id} 
+                       onClick={() => setActive(item.id)}
+                       className={active === item.id ? 'active' : ''}
+                       
+                       >
                   {item.icon} 
                 <span>{item.title}</span>   
                 </li>

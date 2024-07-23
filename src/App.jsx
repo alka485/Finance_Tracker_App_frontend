@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 //------------------------------dependeny
 import bg from './img/bg.png'
@@ -16,13 +16,14 @@ const AppStyled = styled.div `
 `;
 
 function App() {
+  const[active, setActive] = useState(1);
   
 
   return (
     <AppStyled className='App'>
       {/* <Orb/> */}
       <MainLayout>
-        <Navigation/>
+        <Navigation active={active} setActive={setActive}/>
         
       </MainLayout>
       
