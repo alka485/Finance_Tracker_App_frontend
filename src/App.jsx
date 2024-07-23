@@ -4,7 +4,7 @@ import styled from 'styled-components'
 //------------------------------dependeny
 import bg from './img/bg.png'
 import {MainLayout}  from './styles/Layout'
-import Orb from './components/Orb'
+//import Orb from './components/Orb'
 import Navigation from './components/Navigation'
 
 //import './App.css'
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <AppStyled className='App'>
-      <Orb/>
+      {/* <Orb/> */}
       <MainLayout>
         <Navigation/>
         
