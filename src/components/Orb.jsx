@@ -1,6 +1,18 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
+
+const moveOrb = keyframes`
+        0%{
+            transform: translate(0, 0);
+        }
+        50%{
+            transform: translate(400px, 500px);
+        }
+        100%{
+            transform: translate(0, 0);
+        }
+    `
 
 const OrbStyled = styled.div`
         width: 70vh;
@@ -11,6 +23,7 @@ const OrbStyled = styled.div`
         margin-top: -37vh;
         background: linear-gradient(180deg, #F56692 0%, #F2994A 100%);
         filter: blur(400px);
+        animation: ${moveOrb} 1s alternate linear infinite;
 `;
 
 const Orb = () => {
