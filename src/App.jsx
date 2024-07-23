@@ -1,7 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import styled from 'styled-components'
+//------------------------------dependeny
 import bg from './img/bg.png'
+import {MainLayout}  from './styles/Layout'
 
 //import './App.css'
 
@@ -16,6 +18,9 @@ function App() {
 
   return (
     <AppStyled className='App'>
+      <MainLayout>
+        
+      </MainLayout>
       
     </AppStyled>
   )
