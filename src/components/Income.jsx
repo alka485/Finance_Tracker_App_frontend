@@ -4,6 +4,7 @@ import styled from 'styled-components'
 //-------------------------------------dependency
 import { InnerLayout } from '../styles/Layout'
 import { useGlobalContext } from '../context/globalContext';
+import Form from './Form';
 
 const IncomeStyled = styled.div ``;
 
@@ -14,7 +15,10 @@ const Income = () => {
       <InnerLayout>
         <h1>Incomes</h1>
         <div className="income-content">
-          <div className="form-container"></div>
+          <div className="form-container">
+            <Form/>
+
+          </div>
           <div className="incomes">
 
             
