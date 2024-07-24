@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React, {useState} from 'react'
 import styled from 'styled-components'
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css"
 
 const FormStyled = styled.form ``;
 
@@ -23,7 +25,7 @@ const Form = () => {
     //handleInputChange
     const handleInputChange = (name ,e) => {
         setInputState({...inputState, [name] : e.target.value})
-        console.log("value");
+        
     }
     
   return (
@@ -35,6 +37,24 @@ const Form = () => {
                    placeholder='Salary Title'
                    onChange={handleInputChange('title')}
              />
+        </div>
+        <div className="input-control">
+            <input type="text"
+                   value={amount}
+                   name={'amount'}
+                   placeholder='Salary Amount'
+                   onChange={handleInputChange('amount')}
+             />
+        </div>
+        <div className="input-control">
+            <DatePicker id='date'
+                  placeholderText='Enter a Date'
+                  selected={date}
+                  dateFormat="MM/DD/YYYY"
+                  onChange={(date)=>{
+                    setInputState({...inputState, date : date})
+                  }}     
+            />
         </div>
     </FormStyled>
   )
