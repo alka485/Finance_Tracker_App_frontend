@@ -18,6 +18,7 @@ const Form = () => {
     const [ inputState , setInputState] = useState({
         title : '',
         amount : '',
+        type: '',
         date : '',
         category : '',
         description : ''
@@ -28,8 +29,8 @@ const Form = () => {
     const { title ,amount,date,category,description} = inputState;
 
     //handleInputChange
-    const handleInputChange = (name ,e) => {
-        setInputState({...inputState, [name] : e.target.value})
+    const handleInputChange = name=> e => {
+        setInputState({...inputState, [name]:e.target.value})
         
     }
 
@@ -61,7 +62,7 @@ const Form = () => {
             <DatePicker id='date'
                   placeholderText='Enter a Date'
                   selected={date}
-                  dateFormat="MM/DD/YYYY"
+                  dateFormat="MM/dd/yyyy"
                   onChange={(date)=>{
                     setInputState({...inputState, date : date})
                   }}     
@@ -79,6 +80,9 @@ const Form = () => {
                     <option value="youtube">Youtube</option>  
                     <option value="other">Other</option>  
                 </select>
+            </div>
+            <div className="input-control">
+                <textarea name="description" value={description} placeholder='Add A Reference' id="description" cols="30" rows="4" onChange={handleInputChange('description')}></textarea>
             </div>
             <div className="submit-btn">
                 <button>Add Income</button>
