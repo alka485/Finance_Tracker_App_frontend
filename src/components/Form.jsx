@@ -23,6 +23,7 @@ const Form = () => {
     //handleInputChange
     const handleInputChange = (name ,e) => {
         setInputState({...inputState, [name] : e.target.value})
+        console.log("value");
     }
     
   return (
