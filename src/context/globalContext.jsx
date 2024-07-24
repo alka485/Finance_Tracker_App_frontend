@@ -22,12 +22,21 @@ export const GlobalProvider = ({children}) => {
             setError(err.response);
         })
      }
+    
+    const getIncomes = async () => {
+        const response = await axios.post(`${BASE_URL}income`)
+        setIncomes(response.data)
+        console.log(response.data);
+    } 
 
 
 
 
     return (
-    <GlobalContext.Provider value = {{addIncome}}>
+    <GlobalContext.Provider value = {{
+        addIncome,
+        getIncomes
+        }}>
         {children}
    </GlobalContext.Provider>
     )
