@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React,{useEffect} from 'react'
 import styled from 'styled-components'
 //-------------------------------------dependency
 import { InnerLayout } from '../styles/Layout'
@@ -9,7 +9,12 @@ import Form from './Form';
 const IncomeStyled = styled.div ``;
 
 const Income = () => {
-  const {addIncome} = useGlobalContext()
+  const {addIncome,incomes,getIncomes} = useGlobalContext()
+
+  useEffect(() => {
+    getIncomes()
+
+  }, [])
   return (
     <IncomeStyled>
       <InnerLayout>
