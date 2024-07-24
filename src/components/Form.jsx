@@ -26,7 +26,33 @@ const FormStyled = styled.form `
             &::placeholder{
                 color: rgba(34, 34, 96, 0.4);
             }
-    }    `;
+    } 
+    .input-control{
+        input{
+            width: 100%;
+        }
+    }
+    .selects{
+        display: flex;
+        justify-content: flex-end;
+        select{
+            color: rgba(34, 34, 96, 0.4);
+            &:focus, &:active{
+                color: rgba(34, 34, 96, 1);
+            }
+        }
+    }
+    .submit-btn{
+        button{
+            box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+            &:hover{
+                background: var(--color-green) !important;
+            }
+        }
+    }            
+            
+    
+    `;
 
 
 const Form = () => {
