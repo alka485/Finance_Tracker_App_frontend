@@ -19,11 +19,21 @@ const Form = () => {
 
     //destructure the value
     const { title ,amount,date,category,description} = inputState;
+
+    //handleInputChange
+    const handleInputChange = (name ,e) => {
+        setInputState({...inputState, [name] : e.target.value})
+    }
     
   return (
     <FormStyled>
         <div className="input-control">
-            <input type="text" />
+            <input type="text"
+                   value={title}
+                   name={'title'}
+                   placeholder='Salary Title'
+                   onChange={handleInputChange('title')}
+             />
         </div>
     </FormStyled>
   )
