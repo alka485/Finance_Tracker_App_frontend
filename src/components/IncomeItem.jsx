@@ -51,7 +51,26 @@ const IncomeItemStyled = styled.div`
                             height: .8rem;
                             border-radius: 50%;
                             background: ${props => props.indicator};
-                        }           
+                             } 
+                        }  
+            .inner-content{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .text{
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+                p{
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    color: var(--primary-color);
+                    opacity: 0.8;
+                }
+            }
+        }                  
+
  `;
 
 const IncomeItem = ({
