@@ -90,7 +90,7 @@ const IncomeItem = ({
             case 'salary':
                 return money;
             case 'freelancing':
-                return freelance
+                return <i>{freelance}</i>
             case 'investments':
                 return stocks;
             case 'stocks':
@@ -144,7 +144,7 @@ const IncomeItem = ({
                     <p>{comment} {description}</p>
                 </div>
                 <div className="btn-con">
-                    <Button>
+                    <Button
                             icon={trash}
                             bPad={'1rem'}
                             bRad={'50%'}
@@ -153,7 +153,8 @@ const IncomeItem = ({
                             iColor={'#fff'}
                             hColor={'var(--color-green)'}
                             onClick={() => deleteItem(id)}
-                    </Button>
+                     />       
+                        
                 </div>
             </div>
         </div>

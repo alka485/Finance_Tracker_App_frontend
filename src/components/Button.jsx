@@ -13,7 +13,6 @@ const ButtonStyled = styled.button `
         gap: .5rem;
         cursor: pointer;
         transition: all .4s ease-in-out; 
-
 `;
 
 const Button = ({name,icon,onClick,bg,bPad,color,bRad}) => {
