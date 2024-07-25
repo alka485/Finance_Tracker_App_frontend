@@ -140,7 +140,7 @@ const IncomeItem = ({
             <div className="inner-content">
                 <div className="text">
                     <p>{dollar} {amount}</p>
-                    <p>{calender} {date}</p>
+                    <p>{calender} {dateFormat(date)}</p>
                     <p>{comment} {description}</p>
                 </div>
                 <div className="btn-con">
