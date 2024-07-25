@@ -10,7 +10,7 @@ import IncomeItem from './IncomeItem';
 const ExpenseStyled = styled.div`
           display: flex;
           overflow: auto;
-          .total-expense{
+          .total-income{
               display: flex;
               justify-content: center;
               align-items: center;
@@ -28,7 +28,7 @@ const ExpenseStyled = styled.div`
                   color: var(--color-green);
               }
           }
-          .expense-content{
+          .income-content{
               display: flex;
               gap: 2rem;
               .incomes{
@@ -37,7 +37,7 @@ const ExpenseStyled = styled.div`
          }
 `;
 
-const Expense = () => {
+const Expenses = () => {
   const {addExpense,expenses,getExpenses,deleteExpense,totalExpense} = useGlobalContext();
   console.log(expenses);
 
@@ -49,15 +49,15 @@ const Expense = () => {
     <ExpenseStyled>
       <InnerLayout>
         <h1>Expenses</h1>
-        <h2 className='total-expense'>Total Expense: <span>${totalExpense()}</span></h2>
-        <div className="expense-content">
+        <h2 className='total-income'>Total Expense: <span>${totalExpense()}</span></h2>
+        <div className="income-content">
           <div className="form-container">
             <Form/>
           </div>
           <div className="incomes">
-            {incomes.map((expense) => {
-              const {_id, title, amount, date, category, description, type} = expense;
-              return <ExpenseItem
+            {expenses.map((income) => {
+              const {_id, title, amount, date, category, description, type} = income;
+              return <IncomeItem
                         key={_id}
                         id={_id} 
                         title={title} 
