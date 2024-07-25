@@ -41,7 +41,7 @@ export const GlobalProvider = ({children}) => {
         // //getIncomes()
         try {
             await axios.delete(`${BASE_URL}income/${id}`)
-            getIncomes();
+            getIncomes() //Refresh the list after deletion
 
         } catch (err) {
             setError(err.response)
