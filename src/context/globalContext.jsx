@@ -31,9 +31,7 @@ export const GlobalProvider = ({children}) => {
             setIncomes(response.data)
         }  catch (err) {
             setError(err.response);
-        }
-        
-
+        }        
     } 
 
     //deleteIncome
