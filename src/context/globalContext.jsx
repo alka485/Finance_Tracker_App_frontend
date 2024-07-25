@@ -26,15 +26,28 @@ export const GlobalProvider = ({children}) => {
 
     //getIncome
     const getIncomes = async () => {
-        const response = await axios.get(`${BASE_URL}income`)
-        setIncomes(response.data)
-        //console.log(response);
+        try {
+            const response = await axios.get(`${BASE_URL}income`)
+            setIncomes(response.data)
+        }  catch (err) {
+            setError(err.response);
+        }
+        
+
     } 
 
     //deleteIncome
     const deleteIncome = async (id) => {
-        const response = await axios.delete(`${BASE_URL}income/${id}`)
-        getIncomes()
+        // const response = await axios.delete(`${BASE_URL}income/${id}`)
+        // console.log("deleted");
+        // //getIncomes()
+        try {
+            await axios.delete(`${BASE_URL}income/${id}`)
+            getIncomes();
+
+        } catch (err) {
+            setError(err.response)
+        }
 
     }
 
