@@ -84,6 +84,28 @@ const IncomeItem = ({
     indicatorColor,
     type
 }) => {
+    const categoryIcon = () => {
+        switch(category) {
+            case 'salary':
+                return money;
+            case 'freelancing':
+                return freelance
+            case 'investments':
+                return stocks;
+            case 'stocks':
+                return users;
+            case 'bitcoin':
+                return bitcoin;
+            case 'bank':
+                return card;
+            case 'youtube':
+                return yt;
+            case 'other':
+                return piggy;
+            default:
+                return ''
+        }
+    }
   return (
     <IncomeItemStyled indicator={indicatorColor}>
         <div className="icon"></div>
