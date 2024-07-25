@@ -26,6 +26,9 @@ const Income = () => {
 
           </div>
           <div className="incomes">
+            {incomes.map((income) => {
+              const {_id, title, amount, date, category, description, type} = income;
+            })}
 
             
           </div>
