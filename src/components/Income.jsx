@@ -40,7 +40,7 @@ const IncomeStyled = styled.div `
 `;
 
 const Income = () => {
-  const {addIncome,incomes,getIncomes} = useGlobalContext();
+  const {addIncome,incomes,getIncomes,deleteIncome} = useGlobalContext();
   console.log(incomes);
 
   useEffect(() => {
@@ -67,7 +67,8 @@ const Income = () => {
                         date={date} 
                         type={type}
                         category={category} 
-                        indicatorColor="var(--color-green)"          
+                        indicatorColor="var(--color-green)"  
+                        deleteItem={deleteIncome}        
               />
             })}
           </div>
