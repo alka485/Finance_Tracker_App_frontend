@@ -3,6 +3,7 @@
 import React from 'react'
 import styled from 'styled-components'
 //------------------------------------------dependency
+import {dateFormat} from '../utils/dateFormat'
 import { bitcoin, book, calender, card, circle, clothing, comment, dollar, food, freelance, medical, money, piggy, stocks, takeaway, trash, tv, users, yt } from '../utils/Icons';
 import Button from './Button';
 
@@ -147,7 +148,7 @@ const IncomeItem = ({
                             icon={trash}
                             bPad={'1rem'}
                             bRad={'50%'}
-                            bg={'var(--primary-color'}
+                            bg={'var(--primary-color)'}
                             color={'#fff'}
                             iColor={'#fff'}
                             hColor={'var(--color-green)'}
