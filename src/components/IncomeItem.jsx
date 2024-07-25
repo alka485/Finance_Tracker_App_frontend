@@ -90,7 +90,7 @@ const IncomeItem = ({
             case 'salary':
                 return money;
             case 'freelancing':
-                return <i>{freelance}</i>
+                return {freelance}
             case 'investments':
                 return stocks;
             case 'stocks':
