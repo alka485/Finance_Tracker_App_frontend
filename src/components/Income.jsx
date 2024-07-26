@@ -43,6 +43,7 @@ const Income = () => {
   const {addIncome,incomes,getIncomes,deleteIncome,totalIncome} = useGlobalContext();
   console.log(incomes);
 
+  //fetch data on initial render
   useEffect(() => {
     getIncomes()
 

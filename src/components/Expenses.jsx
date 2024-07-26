@@ -43,6 +43,7 @@ const Expenses = () => {
   const {addExpense,expenses,getExpenses,deleteExpense,totalExpenses} = useGlobalContext();
   console.log(expenses);
 
+    //fetch data on initial render
   useEffect(() => {
     getExpenses()
 
