@@ -58,7 +58,7 @@ const Chart = () => {
                     })
                 ],
                 backgroundColor: 'green',
-                // tension: .2   //make graphline curve
+                 tension: .2   //make graphline curve
              },
              {
                 label : 'Expenses',
@@ -69,7 +69,7 @@ const Chart = () => {
                     })
                 ], 
                 backgroundColor: 'red',
-                // tension: .2   //make graphline curve
+                 tension: .2   //make graphline curve
              }
         ]
     }
