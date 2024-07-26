@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import React, {useEffect} from 'react'
 import styled from 'styled-components'
@@ -39,7 +40,7 @@ const ExpenseStyled = styled.div`
 `;
 
 const Expenses = () => {
-  const {addExpense,expenses,getExpenses,deleteExpense,totalExpense} = useGlobalContext();
+  const {addExpense,expenses,getExpenses,deleteExpense,totalExpenses} = useGlobalContext();
   console.log(expenses);
 
   useEffect(() => {
@@ -50,10 +51,10 @@ const Expenses = () => {
     <ExpenseStyled>
       <InnerLayout>
         <h1>Expenses</h1>
-        <h2 className='total-income'>Total Expense: <span>${totalExpense()}</span></h2>
+        <h2 className='total-income'>Total Expense: <span>${totalExpenses()}</span></h2>
         <div className="income-content">
           <div className="form-container">
-            <Form/>
+            <ExpenseForm/>
           </div>
           <div className="incomes">
             {expenses.map((income) => {
