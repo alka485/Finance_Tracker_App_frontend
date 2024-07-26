@@ -32,7 +32,7 @@ const DashboardStyled = styled.div `
                     border-radius: 20px;
                     padding: 1rem;
                     p{
-                        font-size: 3.5rem;
+                        font-size: 2.5rem;
                         font-weight: 700;
                     }
                 }
