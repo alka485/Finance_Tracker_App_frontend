@@ -36,7 +36,6 @@ const DashboardStyled = styled.div `
                         font-weight: 700;
                     }
                 }
-
                 .balance{
                     grid-column: 2 / 4;
                     display: flex;
@@ -50,11 +49,6 @@ const DashboardStyled = styled.div `
                     }
                 }
             }
-
-
-          
-
-
       }
       .history-con{
          grid-column: 4/-1;      
@@ -70,10 +64,22 @@ const DashboardStyled = styled.div `
                 font-size: 1.8rem;
             }
         }
- 
-          
-      }    
-    
+        .salary-item{
+                background: #FCF6F9;
+                border: 2px solid #FFFFFF;
+                box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
+                padding: 1rem;
+                border-radius: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                p{
+                    font-weight: 600;
+                    font-size: 1.6rem;
+                }
+            }
+        }              
+      }        
 `;
 
 const Dashboard = () => {
