@@ -13,7 +13,7 @@ const DashboardStyled = styled.div``;
 
 const Dashboard = () => {
 
-  const {totalExpenses , totalIncome, totalBalance,getIncomes,getExpenses} = useGlobalContext()  //destructuring
+  const {totalExpenses , totalIncome, totalBalance,getIncomes,getExpenses,incomes,expenses} = useGlobalContext()  //destructuring
 
    //fetch data on initial render
    useEffect(() => {
@@ -54,6 +54,24 @@ const Dashboard = () => {
         </div>
         <div className="history-con">
           <History/>
+          <h2 className='salary-title'>Min<span>Salary</span>Max</h2>
+          <div className="salary-item">
+            {/* fetch min and max income amount */}
+            <p>
+              ${Math.min(...incomes.map(item => item.amount))}   
+            </p>
+            <p>
+              ${Math.max(...incomes.map(item => item.amount))}
+            </p>
+          </div>
+          <h2 className="salary-title">Min<span>Expense</span>Max</h2>
+          <div className="salary-item">
+            {/* fetch min and max expense amount */}
+            <p>
+              ${Math.min(...expenses.map(item => item.amount))}
+            </p>
+
+          </div>
         </div>
       </InnerLayout>
 
