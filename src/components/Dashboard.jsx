@@ -70,6 +70,9 @@ const Dashboard = () => {
             <p>
               ${Math.min(...expenses.map(item => item.amount))}
             </p>
+            <p>
+              ${Math.max(...expenses.map(item => item.amount))}
+            </p>
 
           </div>
         </div>
