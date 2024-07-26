@@ -7,9 +7,26 @@ import {useGlobalContext} from '../context/globalContext'
 const HistoryStyled = styled.div``;
 
 const History = () => {
-    const {transactionHistory} = useGlobalContext();
+    const {transactionHistory} = useGlobalContext()
+
+    const [...history] = transactionHistory()
+
+    
   return (
-    <HistoryStyled>History</HistoryStyled>
+    <HistoryStyled>
+        <h2>Recent History</h2>
+        {history.map((item) => {
+            const {_id,title,amount,type} = item
+            return(
+                <div key={_id} className="history-item">
+                    <p>
+                        {title}
+                    </p>
+
+                </div>
+            )
+        })}
+    </HistoryStyled>
   )
 }
 
