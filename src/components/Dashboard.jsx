@@ -27,6 +27,8 @@ const DashboardStyled = styled.div `
                   }
                   .income,.expense, .balance{
                         background: #FCF6F9;
+                        border: 2px solid #FFFFFF;
+                        box-shadow: 0px 1px 15px rgba(0,0,0,0.06);
                         p{
                         }
                   }    
@@ -43,6 +45,10 @@ const DashboardStyled = styled.div `
          h2{
            align-items: center;
          }
+         .salary-title{
+         } 
+         .salary-item{
+         } 
      }     
 
      
@@ -91,7 +97,7 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="history-con">
-          <History/>
+          {/* <History/> */}
           <h2 className='salary-title'>Min<span>Salary</span>Max</h2>
           <div className="salary-item">
             {/* fetch min and max income amount */}
