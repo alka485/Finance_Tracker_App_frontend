@@ -69,7 +69,7 @@ function ExpenseForm() {
                 />
             </div>
             <div className="selects input-control">
-                <select required value={category} name="category" id="category" onChange={handleInput('category')}>
+                <select required value={category} name="category" id="category" onChange={handleInputChange('category')}>
                     <option value="" disabled >Select Option</option>
                     <option value="education">Education</option>
                     <option value="groceries">Groceries</option>
@@ -82,7 +82,7 @@ function ExpenseForm() {
                 </select>
             </div>
             <div className="input-control">
-                <textarea name="description" value={description} placeholder='Add A Reference' id="description" cols="30" rows="4" onChange={handleInput('description')}></textarea>
+                <textarea name="description" value={description} placeholder='Add A Reference' id="description" cols="30" rows="4" onChange={handleInputChange('description')}></textarea>
             </div>
             <div className="submit-btn">
                 <Button 
