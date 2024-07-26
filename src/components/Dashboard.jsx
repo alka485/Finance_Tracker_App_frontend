@@ -38,11 +38,11 @@ const Dashboard = () => {
                 <p>
                   {dollar} {totalBalance()}
                 </p>
-
               </div>
             </div>
           </div>
         </div>
+        <div className="history-con"></div>
       </InnerLayout>
 
     </DashboardStyled>
