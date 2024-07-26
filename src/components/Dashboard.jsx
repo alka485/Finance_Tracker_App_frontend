@@ -10,7 +10,12 @@ const Dashboard = () => {
   return (
     <DashboardStyled>
       <InnerLayout>
-        <h1>hello</h1>
+        <h1>All transactions</h1>
+        <div className="state-con">
+          <div className="chart-con">
+            
+          </div>
+        </div>
       </InnerLayout>
 
     </DashboardStyled>
