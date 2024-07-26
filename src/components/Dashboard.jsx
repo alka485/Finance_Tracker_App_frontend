@@ -9,7 +9,19 @@ import { dollar } from '../utils/Icons'
 import {useGlobalContext}  from '../context/globalContext'
 import History from './History.jsx';
 
-const DashboardStyled = styled.div``;
+const DashboardStyled = styled.div`
+     .stats-con{
+           display:grid;
+           grid-template-columns : repeat(5, 1fr);
+           gap: 2rem;
+           .chart-con{
+           
+           }
+     }
+
+
+
+`;
 
 const Dashboard = () => {
 
