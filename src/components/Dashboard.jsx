@@ -5,10 +5,13 @@ import styled from 'styled-components'
 import { InnerLayout } from '../styles/Layout';
 import Chart  from './Chart.jsx';
 import { dollar } from '../utils/Icons'
+import {useGlobalContext}  from '../context/globalContext'
 
 const DashboardStyled = styled.div``;
 
 const Dashboard = () => {
+
+  const {totalExpenses , totalIncome, totalBalance} = useGlobalContext()  //destructuring
   
   return (
     <DashboardStyled>
@@ -20,7 +23,22 @@ const Dashboard = () => {
             <div className="amount-con">
               <div className="income">
                 <h2>Total Income</h2>
-                <p>{dollar}</p>
+                <p>
+                  {dollar} {totalIncome()}
+                 </p>
+              </div>
+              <div className="expense">
+                <h2>Total Expense</h2>
+                <p>
+                  {dollar} {totalExpenses()}
+                </p>
+              </div>
+              <div className="balance">
+                <h2>Total Balance</h2>
+                <p>
+                  {dollar} {totalBalance()}
+                </p>
+
               </div>
             </div>
           </div>
