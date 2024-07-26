@@ -1,11 +1,12 @@
 /* eslint-disable no-unused-vars */
-import React , {useEffect} from 'react'
+import React, {useEffect} from 'react'
 import styled from 'styled-components'
 //-------------------------------------------dependency
 import { InnerLayout } from '../styles/Layout'
 import { useGlobalContext } from '../context/globalContext';
 import Form from './Form';
 import IncomeItem from './IncomeItem';
+import ExpenseForm from './ExpenseForm';
 
 const ExpenseStyled = styled.div`
           display: flex;
