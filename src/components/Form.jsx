@@ -95,6 +95,7 @@ const Form = () => {
     
   return (
     <FormStyled onSubmit={handleFormSubmit}>
+          {error && <p className='error'>{error}</p>}
         <div className="input-control">
             <input type="text"
                    value={title}
