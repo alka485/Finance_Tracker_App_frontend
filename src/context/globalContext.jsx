@@ -92,11 +92,10 @@ export const GlobalProvider = ({children}) => {
 
     const transactionHistory = () => {
         const history = [...incomes, ...expenses]
-        history.sort((a, b) => {
+        history.sort((a, b) => {  //for sorting data based on creation date
             return new Date(b.createdAt) - new Date(a.createdAt)
         })
-
-        return history.slice(0, 3)
+          return history.slice(0, 3)
     }
   
     return (
