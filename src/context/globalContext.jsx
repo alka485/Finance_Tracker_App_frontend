@@ -95,7 +95,7 @@ export const GlobalProvider = ({children}) => {
         history.sort((a, b) => {  //for sorting data based on creation date
             return new Date(b.createdAt) - new Date(a.createdAt)
         })
-          return history.slice(0, 3)
+          return history.slice(0, 3)  //getting only 3 recent transactions
     }
   
     return (
