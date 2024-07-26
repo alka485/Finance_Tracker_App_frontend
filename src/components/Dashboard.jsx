@@ -10,6 +10,40 @@ import {useGlobalContext}  from '../context/globalContext'
 import History from './History.jsx';
 
 const DashboardStyled = styled.div `
+     .stats-con{
+          display: grid;
+          grid-template-columns: repeat(5 , 1fr);
+          gap:2rem;
+          .chart-con{
+              grid-column: 1/4;
+              height: 400px;
+              .amount-con{
+                  display: grid;
+                  grid-template-columns: repeat(4,1fr);
+                  gap:2rem;
+                  margin-top: 2rem;
+                  .income, .expense{
+                      grid-column: span 2;
+                  }
+                  .income,.expense, .balance{
+                        background: #FCF6F9;
+                        p{
+                        }
+                  }    
+              }
+               .balance {
+                    p{
+                    
+                    }
+               }   
+          }
+     }
+     .history-con {
+         grid-column: 4/-1;
+         h2{
+           align-items: center;
+         }
+     }     
 
      
 
