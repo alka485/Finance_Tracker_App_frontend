@@ -59,7 +59,7 @@ const FormStyled = styled.form `
 
 const Form = () => {
 
-    const {addIncome} = useGlobalContext()
+    const {addIncome,error} = useGlobalContext()
 
     //by default value is empty
     const [ inputState , setInputState] = useState({
