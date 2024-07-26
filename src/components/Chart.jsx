@@ -41,12 +41,35 @@ const Chart = () => {
         labels : incomes.map((inc) => {
             const {date} = inc
             return dateFormat(date) 
-        })
+        }),
+        datasets : [
+             {
+                label : 'Income',
+                data: [
+                    ...incomes.map((income) => {
+                        const {amount} = income
+                        return amount
+                    })
+                ],
+                backgroundColor: 'green',
+             },
+             {
+                label : 'Expenses',
+                data: [
+                    ...expenses.map((expense)=> {
+                        const {amount} = expense
+                        return amount
+                    })
+                ], 
+                backgroundColor: 'red'
+             }
+        ]
+        
 
     }
   return (
     <ChartStyled>
-        <Line/>
+        <Line  data = {data}/>
     </ChartStyled>
   )
 }
