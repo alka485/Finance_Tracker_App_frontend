@@ -51,15 +51,13 @@ const FormStyled = styled.form `
                 background: var(--color-green) !important;
             }
         }
-    }            
-            
-    
+    }                        
     `;
 
 
 const Form = () => {
+    const {addIncome,error,setError} = useGlobalContext()
 
-    const {addIncome,error} = useGlobalContext()
    //by default value is empty
     const [ inputState , setInputState] = useState({
         title : '',
@@ -67,8 +65,7 @@ const Form = () => {
         type: '',
         date : '',
         category : '',
-        description : ''
-    
+        description : ''   
     });
 
     //destructure the value
@@ -77,7 +74,7 @@ const Form = () => {
     //handleInputChange
     const handleInputChange = name=> e => {
         setInputState({...inputState, [name]:e.target.value})
-        
+        setError('')    
     }
 
     const handleFormSubmit = (e) => {
