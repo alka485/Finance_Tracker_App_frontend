@@ -20,12 +20,12 @@ function ExpenseForm() {
 
     const { title, amount, date, category,description } = inputState;
 
-    const handleInput = name => e => {
+    const handleInputChange = name => e => {
         setInputState({...inputState, [name]: e.target.value})
         setError('')
     }
 
-    const handleSubmit = e => {
+    const handleFormSubmit = e => {
         e.preventDefault()
         addExpense(inputState)
         setInputState({
@@ -38,7 +38,7 @@ function ExpenseForm() {
     }
 
     return (
-        <ExpenseFormStyled onSubmit={handleSubmit}>
+        <ExpenseFormStyled onSubmit={handleFormSubmit}>
             {error && <p className='error'>{error}</p>}
             <div className="input-control">
                 <input 
@@ -46,7 +46,7 @@ function ExpenseForm() {
                     value={title}
                     name={'title'} 
                     placeholder="Expense Title"
-                    onChange={handleInput('title')}
+                    onChange={handleInputChange('title')}
                 />
             </div>
             <div className="input-control">
@@ -54,7 +54,7 @@ function ExpenseForm() {
                     type="text" 
                     name={'amount'} 
                     placeholder={'Expense Amount'}
-                    onChange={handleInput('amount')} 
+                    onChange={handleInputChange('amount')} 
                 />
             </div>
             <div className="input-control">
