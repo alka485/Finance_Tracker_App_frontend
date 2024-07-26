@@ -4,7 +4,6 @@ import styled from 'styled-components'
 //------------------------------dependeny
 import bg from './img/bg.png'
 import {MainLayout}  from './styles/Layout'
-//import Orb from './components/Orb'
 import Navigation from './components/Navigation'
 import Dashboard from './components/Dashboard';
 import Income from './components/Income';
@@ -56,7 +55,6 @@ function App() {
 
   return (
     <AppStyled className='App'>
-      {/* <Orb/> */}
       <MainLayout>
         <Navigation active={active} setActive={setActive}/>
         <main>
