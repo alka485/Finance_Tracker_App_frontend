@@ -17,11 +17,23 @@ export const GlobalProvider = ({children}) => {
 
     //calculate incomes
     const addIncome = async (income) => {
-        const response = await axios.post(`${BASE_URL}income`,income)
-        .catch((err) => {
-            setError(err.response.data.message);
-        })
-        getIncomes()
+        // const response = await axios.post(`${BASE_URL}income`,income)
+        // .catch((err) => {
+        //     setError(err.response.data.message);
+        // })
+        // getIncomes()
+        try {
+            const response = await axios.post(`${BASE_URL}expense`, income);
+            getExpenses();
+          } catch (err) {
+            if (err.response.data.message) {
+              // Display validation errors
+              setError(err.response.data.msg);
+            } else {
+              // Display generic error message
+              setError('All fields are required');
+            }
+          }
      }
 
     //getIncome
@@ -58,18 +70,13 @@ export const GlobalProvider = ({children}) => {
 
     //Calculate Expense
     const addExpense = async (income) => {
-        // const response = await axios.post(`${BASE_URL}expense`, income)
-        //     .catch((err) =>{
-        //         setError(err.response.data.message)
-        //     })
-        // getExpenses()
         try {
-            const response = await axios.post(`${BASE_URL}expense`, expense);
+            const response = await axios.post(`${BASE_URL}expense`, income);
             getExpenses();
           } catch (err) {
-            if (err.response && err.response.data && err.response.data.errors) {
+            if (err.response.data.message) {
               // Display validation errors
-              setError(err.response.data.errors.map(error => error.msg).join(', '));
+              setError(err.response.data.msg);
             } else {
               // Display generic error message
               setError('All fields are required');
