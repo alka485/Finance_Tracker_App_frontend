@@ -58,11 +58,23 @@ export const GlobalProvider = ({children}) => {
 
     //Calculate Expense
     const addExpense = async (income) => {
-        const response = await axios.post(`${BASE_URL}expense`, income)
-            .catch((err) =>{
-                setError(err.response.data.message)
-            })
-        getExpenses()
+        // const response = await axios.post(`${BASE_URL}expense`, income)
+        //     .catch((err) =>{
+        //         setError(err.response.data.message)
+        //     })
+        // getExpenses()
+        try {
+            const response = await axios.post(`${BASE_URL}expense`, expense);
+            getExpenses();
+          } catch (err) {
+            if (err.response && err.response.data && err.response.data.errors) {
+              // Display validation errors
+              setError(err.response.data.errors.map(error => error.msg).join(', '));
+            } else {
+              // Display generic error message
+              setError('All fields are required');
+            }
+          }
     }
 
     const getExpenses = async () => {

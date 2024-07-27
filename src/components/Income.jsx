@@ -75,7 +75,6 @@ const Income = () => {
             })}
           </div>
         </div>
-
       </InnerLayout>
     </IncomeStyled>
   )
