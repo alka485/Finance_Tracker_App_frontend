@@ -19,7 +19,7 @@ const NavStyled = styled.div`
       flex-direction: column;
       justify-content: space-between;
       gap: 2rem;
-    .user-con{
+      .user-con{
             height: 100px;
             display: flex;
             align-items: center;
@@ -98,7 +98,6 @@ const Navigation = ({active, setActive}) => {
                        key = {item.id} 
                        onClick={() => setActive(item.id)}
                        className={active === item.id ? 'active' : ''}
-                       
                        >
                   {item.icon} 
                 <span>{item.title}</span>   
