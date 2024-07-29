@@ -100,12 +100,7 @@ const SignUp = () => {
     }
 
     try {
-      // Replace with your sign-up logic (e.g., API call)
-      // Example:
-      // const response = await axios.post('/api/signup', { email, password });
-
-      // If successful, redirect to sign-in page
-      navigate('/signin');
+      navigate('/financial-record');
     } catch (err) {
       setError('Failed to sign up. Please try again.');
     }
