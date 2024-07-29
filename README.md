@@ -28,6 +28,10 @@ The Finance Tracker App is a web application designed to help users manage their
 
 * Icons: FontAwesome
 
+### Getting Started
+
+
+
 
 
 
