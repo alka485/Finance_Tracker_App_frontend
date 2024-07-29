@@ -30,6 +30,24 @@ The Finance Tracker App is a web application designed to help users manage their
 
 ### Getting Started
 
+## Prerequisites
+
+* Node.js (version 12 or higher)
+
+* npm (version 6 or higher)
+
+* MongoDB 
+
+##  Installation
+
+* Clone the repository:
+
+`code(git clone https://github.com/your-username/finance-tracker-app.git
+cd finance-tracker-app
+)`
+
+
+
 
 
 
