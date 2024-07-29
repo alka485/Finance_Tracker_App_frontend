@@ -105,19 +105,19 @@ const Dashboard = () => {
               <div className="income">
                 <h2>Total Income</h2>
                 <p>
-                  {dollar} {totalIncome()}
+                  {dollar} {totalIncome().toFixed(2)}
                  </p>
               </div>
               <div className="expense">
                 <h2>Total Expense</h2>
                 <p>
-                  {dollar} {totalExpenses()}
+                  {dollar} {totalExpenses().toFixed(2)}
                 </p>
               </div>
               <div className="balance">
                 <h2>Total Balance</h2>
                 <p>
-                  {dollar} {totalBalance()}
+                  {dollar} {totalBalance().toFixed(2)}
                 </p>
               </div>
             </div>
