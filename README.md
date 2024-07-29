@@ -42,9 +42,38 @@ The Finance Tracker App is a web application designed to help users manage their
 
 * Clone the repository:
 
-`code(git clone https://github.com/your-username/finance-tracker-app.git
-cd finance-tracker-app
-)`
+`git clone https://github.com/your-username/finance-tracker-app.git
+cd finance-tracker-app`
+
+* Install dependencies:
+
+`npm install`
+
+* Run the app:
+
+`npm start`
+
+## Usage 
+
+### Sign Up / Sign In:
+
+Navigate to the Home Page and sign up or sign in using your credentials.
+
+### Add Transactions:
+
+Use the form to add new income or expense transactions.
+
+### View Dashboard:
+
+The dashboard provides an overview of your total income, expenses, and balance. It also includes charts and transaction history.
+
+
+
+
+
+
+
+
 
 
 
