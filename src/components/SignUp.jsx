@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
+import { useGlobalContext } from '../context/globalContext';
 
 // Styled Components
 const SignUpPageStyled = styled.div`

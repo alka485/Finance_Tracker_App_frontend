@@ -112,6 +112,16 @@ export const GlobalProvider = ({children}) => {
         })
           return history.slice(0, 3)  //getting only 3 recent transactions
     }
+
+    //Sign-Up Function
+    // const signup = async (email,password) => {
+    //     try {
+
+    //     } catch (err) {
+    //         setError(err.response ? err.response.data.message : 'Sign-Up Failed')
+    //     }
+
+    // }
   
     return (
     <GlobalContext.Provider value= {{
