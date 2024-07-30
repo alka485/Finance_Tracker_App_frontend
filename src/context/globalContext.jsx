@@ -19,8 +19,8 @@ export const GlobalProvider = ({children}) => {
     const addIncome = async (income) => {
         
         try {
-            const response = await axios.post(`${BASE_URL}expense`, income);
-            getExpenses();
+            const response = await axios.post(`${BASE_URL}income`, income);
+            getIncomes();
           } catch (err) {
             if (err.response.data.message) {
               // Display validation errors
