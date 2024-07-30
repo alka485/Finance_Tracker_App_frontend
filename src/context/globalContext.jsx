@@ -21,6 +21,7 @@ export const GlobalProvider = ({children}) => {
         try {
             const response = await axios.post(`${BASE_URL}income`, income);
             getIncomes();
+            console.log("hello from front");
           } catch (err) {
             if (err.response.data.message) {
               // Display validation errors
